@@ -1,0 +1,53 @@
+<script>
+    // DATA
+    const PIN = "1234"  // why not NUMBER?
+
+    let pin     = ""
+    let tries   = 0
+    let balance = 30000.00
+
+    while(true) {
+
+        pin = prompt("ENTER PIN: ")
+        
+        tries++
+        
+        if (pin == PIN){
+           // ////////////////
+           alert(`
+           ACCESS GRANTED!!!\n\n
+           your balance: ${balance.toFixed(2)}MDL
+           `)
+           let money = +prompt("WITHDRAW: ?")
+           const LIMIT = 25000.00
+           // HW1: upgrade - check balance
+            // HW2: max money = 50000.00
+           if(money <= balance) {
+               if(money <= LIMIT) {
+                   balance -= money // balance = balance - money
+           alert(`
+           SUCCESS!!!\n\n
+           your balance: ${balance.toFixed(2)}MDL
+           `)   
+               } else if (money > LIMIT) {
+                   alert(`Suma de extragere nu poate depasi ${LIMIT.toFixed(2)}MDL`)
+               }
+            
+           } else {
+               alert(`Nu sunt suficienti bani pe cont!!! 
+                      Balanta contului este ${balance.toFixed(2)}MDL
+               `)
+           }
+           // ////////////////
+           break
+        } else {
+           alert("WRONG PIN!!!")
+           if(tries == 3) {
+               alert("CARD BLOCKED!!!") 
+               break // force WHILE stop
+           }
+        }
+
+    }
+
+</script>

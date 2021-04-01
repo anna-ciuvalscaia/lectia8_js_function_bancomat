@@ -1,0 +1,37 @@
+<script>
+// switch -> branching
+
+// Choose the day
+
+let typeCalendar = prompt(`what calendar?  "sun" or "ortodox" `)
+
+let day = parseInt(prompt(`Day of the week? `)) //1..7
+
+if (typeCalendar  == "ortodox") {
+    day--
+    if ( day == 0 ){
+        day = 7
+    }
+}
+
+switch( day ){ // --- calendar sun
+
+case 1: document.write("Mo"); break
+case 2: document.write("Tu"); break
+case 3: document.write("Wd"); break
+case 4: document.write("Th"); break
+case 5: 
+let times = 3
+while (times > 0) {
+    document.write("Yeee!!! :) ")
+    times--
+}
+document.write("Fr"); break
+case 6: document.write("Sa"); break
+case 7: document.write("Su"); break
+
+default: document.write("Are you drunk? :D"); break
+        }
+
+</script>
+
