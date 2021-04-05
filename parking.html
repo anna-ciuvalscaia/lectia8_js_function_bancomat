@@ -1,0 +1,41 @@
+<script>
+
+    const PARKING_PLACES = 7
+    let freePlace = 3
+
+let decor = "" // reprezinta perimetrul de sus a parcarii ###########
+for (let x = 1 ; x <= PARKING_PLACES * 5; x++ ) {
+    decor += "#"
+}
+console.log(decor)
+
+let places = "" // reprezinta spatiul interior a parcarii (locurile)
+for (let x = 1; x <= PARKING_PLACES; x++) {
+    if(x == freePlace ){
+        places += "|   |"
+    } else {
+       places += "| X |" 
+    }
+    
+}
+console.log(places)
+
+decor = "" // reprezinta perimetrul de jos a parcarii ###########
+for (let x = 1; x <= PARKING_PLACES * 5; x++) {
+    decor += "#"
+}
+console.log(decor)
+
+// DEFINITIA LET: Variabilele sunt nume stocate 
+// in memorie la care se atribue /memoreaza diferite date.
+// Declaratia  let permite definirea de variabile care sunt limitate 
+// la sectiunea /scopul, expresia unde au fost definite. 
+// Din acest motiv o variabila let trebuie difinita 
+// inainte de oricare ciclu ca sa fie vizibila in acest ciclu.
+
+
+// DEFENITIA CONSTANTEI: Spre deosebire de variabile, 
+// valoarea unei constante nu poate fi schimbata 
+// si nu poate fi redeclarata, valoarea lor ramane aceeasi, fixa.
+
+</script>
